@@ -19,8 +19,6 @@ const completeChallenge = (score) => {
 }
 
 function receiveMessage(event) {
-  console.log("receiveMessage(event)")
-
   const data = event.data
   if (data.type !== "challengeData") {
     return
