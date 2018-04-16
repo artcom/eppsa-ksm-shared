@@ -14,7 +14,41 @@ const completeChallenge = (score) => {
   gameClient.source.postMessage(
     {
       source: "challenge",
-      score
+      score,
+      id: "finish"
+    }, gameClient.origin)
+}
+
+const showTimeline = (sessionLength) => {
+  gameClient.source.postMessage(
+    {
+      source: "challenge",
+      startTime: sessionLength,
+      id: "showTimeline"
+    }, gameClient.origin)
+}
+
+const startTimelineClock = () => {
+  gameClient.source.postMessage(
+    {
+      source: "challenge",
+      id: "startTimelineClock"
+    }, gameClient.origin)
+}
+
+const stopTimelineClock = () => {
+  gameClient.source.postMessage(
+    {
+      source: "challenge",
+      id: "stopTimelineClock"
+    }, gameClient.origin)
+}
+
+const hideTimeline = () => {
+  gameClient.source.postMessage(
+    {
+      source: "challenge",
+      id: "hideTimeline"
     }, gameClient.origin)
 }
 
@@ -30,7 +64,13 @@ function receiveMessage(event) {
 
   console.log(data.data)
 
-  onReadyCallback(data.data, completeChallenge)
+  onReadyCallback(data.data, { callbacks: {
+    completeChallenge,
+    showTimeline,
+    startTimelineClock,
+    stopTimelineClock,
+    hideTimeline
+  } })
 }
 
 export default function bootstrap(onReady) {
@@ -64,7 +104,13 @@ export default function bootstrap(onReady) {
           .then((data) => {
             const content = selectContent(transform(data), challengeType, challengeNumber)
             console.log(content)
-            onReadyCallback(content, completeChallenge)
+            onReadyCallback(content, { callbacks: {
+              completeChallenge,
+              showTimeline,
+              startTimelineClock,
+              stopTimelineClock,
+              hideTimeline
+            } })
           })
       }
     }
