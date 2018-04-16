@@ -18,11 +18,11 @@ const finishChallenge = (score) => {
     }, gameClient.origin)
 }
 
-const showTimeline = (sessionLength) => {
+const showTimeline = (startTime) => {
   gameClient.source.postMessage(
     {
       source: "challenge",
-      startTime: sessionLength,
+      startTime,
       id: "showTimeline"
     }, gameClient.origin)
 }
@@ -85,6 +85,8 @@ export default function bootstrap(onReady) {
     const challengeNumber = url.searchParams.get("challengeNumber")
     const challengeType = url.searchParams.get("challengeType")
 
+
+
     if (!challengeNumber || !challengeType) {
       console.error(`Missing query parameters:
         challengeNumber=${challengeNumber},
@@ -104,11 +106,11 @@ export default function bootstrap(onReady) {
             const content = selectContent(transform(data), challengeType, challengeNumber)
             console.log(content)
             onReadyCallback(content, { callbacks: {
-              finishChallenge,
-              showTimeline,
-              startTimelineClock,
-              stopTimelineClock,
-              hideTimeline
+              finishChallenge: score => { console.log(`finishChallenge, score: ${score}`) },
+              showTimeline: startTime => { console.log(`showTimeline, startTime: ${startTime}`) },
+              startTimelineClock: () => { console.log("startTimelineClock") },
+              stopTimelineClock: () => { console.log("stopTimelineClock") },
+              hideTimeline: () => { console.log("hideTimeline") },
             } })
           })
       }
