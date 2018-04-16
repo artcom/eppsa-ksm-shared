@@ -9,7 +9,7 @@ const staticServerUri = process.env.STATIC_SERVER_URI
 let gameClient
 let onReadyCallback
 
-const completeChallenge = (score) => {
+const finishChallenge = (score) => {
   gameClient.source.postMessage(
     {
       source: "challenge",
@@ -64,7 +64,7 @@ function receiveMessage(event) {
   console.log(data.data)
 
   onReadyCallback(data.data, { callbacks: {
-    completeChallenge,
+    finishChallenge,
     showTimeline,
     startTimelineClock,
     stopTimelineClock,
@@ -104,7 +104,7 @@ export default function bootstrap(onReady) {
             const content = selectContent(transform(data), challengeType, challengeNumber)
             console.log(content)
             onReadyCallback(content, { callbacks: {
-              completeChallenge,
+              finishChallenge,
               showTimeline,
               startTimelineClock,
               stopTimelineClock,
