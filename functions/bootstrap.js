@@ -47,11 +47,16 @@ export default function bootstrap(onReady) {
     const challengeType = url.searchParams.get("challengeType")
 
     if (!challengeNumber || !challengeType) {
-      console.error(`Missing query parameters: ${challengeNumber}, ${challengeType}`)
+      console.error(`Missing query parameters:
+        challengeNumber=${challengeNumber},
+        challengeType=${challengeType}`
+      )
     } else {
       if (!contentServerUri || !assetServerUri || !staticServerUri) {
-        console.log(
-          `Missing config parameters: ${contentServerUri}, ${assetServerUri}, ${staticServerUri}`
+        console.error(`Missing config parameters:
+          contentServerUri=${contentServerUri},
+          assetServerUri=${assetServerUri},
+          staticServerUri=${staticServerUri}`
         )
       } else {
         const contentServer = new ContentServer(contentServerUri)
