@@ -14,6 +14,7 @@ export default {
     offsetX: "5vh",
     borderRadius: "25px",
     buttonBorder: "5px",
+    iconBorder: "10px"
   },
   font: {
     fontFamily: "Cabin",
