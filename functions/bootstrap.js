@@ -122,13 +122,15 @@ export default function bootstrap(onReady) {
 }
 
 function selectContent(data, challengeType, challengeNumber) {
-  const station = data.challenges[challengeNumber]
+  const { shared } = data
+  const { color } = data.challenges[challengeNumber]
   const challenge = data.challenges[challengeNumber].challengeTypes[challengeType]
 
   return {
-    color: station.color,
-    shared: data.shared,
     challenge,
+    color,
+    shared,
+    assetServerUri,
     staticServerUri
   }
 }
