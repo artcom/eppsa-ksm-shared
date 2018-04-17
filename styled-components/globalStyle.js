@@ -8,6 +8,7 @@ export function injectGlobalStyle(staticServerUrl) {
     body {
       margin: 0;
       padding: 0;
+      user-select: none;
     }
 
     @font-face {
