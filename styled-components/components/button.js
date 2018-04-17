@@ -1,3 +1,4 @@
+import React from "react"
 import styled, { css } from "styled-components"
 import clickEffect from "../animations/clickEffect"
 
@@ -20,5 +21,5 @@ export default styled.div `
   font-size: ${props => props.theme.font.button.size};
   font-weight: ${props => props.theme.font.button.weight};
   color: ${props => props.theme.font.button.color};
-  animation: ${props => props.clicked ? css`, ${clickEffect()};` : ";"}
+  animation: ${props => props.clicked ? css`${clickEffect()};` : ";"}
 `
