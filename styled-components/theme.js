@@ -14,7 +14,7 @@ export default {
     offsetX: "5vh",
     borderRadius: "25px",
     buttonBorder: "5px",
-    defaultSpacing: "2vh"
+    defaultSpacing: "2vh",
     iconBorder: "10px"
   },
   font: {
