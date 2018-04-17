@@ -15,6 +15,7 @@ export default {
     borderRadius: "25px",
     buttonBorder: "5px",
     defaultSpacing: "2vh"
+    iconBorder: "10px"
   },
   font: {
     fontFamily: "Cabin",
