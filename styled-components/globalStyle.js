@@ -17,17 +17,6 @@ export function injectGlobalStyle(staticServerUrl) {
       height: 100%;
     }
 
-    iframe {
-      overflow: hidden;
-
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-
-      border: none;
-    }
-
     @font-face {
       font-family: ${fontFamily};
       font-weight: 400;
