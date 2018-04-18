@@ -6,7 +6,8 @@ export default styled.div `
   margin-top: 0.5em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  width: 100%;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
   max-height: 3.5em;
   overflow: hidden;
   box-sizing: border-box;
@@ -16,6 +17,7 @@ export default styled.div `
   border-color: ${props => props.theme.colors.areaColor};
   text-align: center;
   display: flex;
+  align-self: center;
   justify-content: center;
   font-size: ${props => props.theme.font.button.size};
   font-weight: ${props => props.theme.font.button.weight};
