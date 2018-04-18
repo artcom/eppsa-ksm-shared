@@ -9,7 +9,21 @@ export function injectGlobalStyle(staticServerUrl) {
       margin: 0;
       padding: 0;
       height: 100%;
+      width: 100%;
       user-select: none;
+    }
+
+    iframe {
+      overflow: hidden;
+
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      background: red;
+
+      border: none;
     }
 
     @font-face {
