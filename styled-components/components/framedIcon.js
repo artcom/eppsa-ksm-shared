@@ -1,8 +1,8 @@
 import styled from "styled-components"
 
 export default styled.div`
-  height: 15em;
-  width: 15em;
+  width: 80%;
+  padding-bottom: 80%;
   border-radius: 50%;
   align-self: center;
   border: ${props => props.theme.layout.iconBorder} solid ${props => props.theme.colors.areaColor};
