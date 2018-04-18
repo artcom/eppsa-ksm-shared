@@ -11,7 +11,8 @@ export default {
     wrongAnswer: "#f3352f"
   },
   layout: {
-    offsetX: "5vh",
+    offsetX: "10vw",
+    offsetY: "5vh",
     borderRadius: "25px",
     buttonBorder: "5px",
     defaultSpacing: "2vh",
