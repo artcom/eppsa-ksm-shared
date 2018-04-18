@@ -5,12 +5,16 @@ const fontFamily = "Cabin"
 
 export function injectGlobalStyle(staticServerUrl) {
   injectGlobal`
-    body {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
       width: 100%;
       user-select: none;
+    }
+
+    #app, #root {
+      height: 100%;
     }
 
     iframe {
@@ -20,8 +24,6 @@ export function injectGlobalStyle(staticServerUrl) {
       left: 0;
       width: 100%;
       height: 100%;
-
-      background: red;
 
       border: none;
     }
