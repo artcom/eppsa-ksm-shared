@@ -14,6 +14,7 @@ export default {
     offsetX: "10vw",
     offsetY: "5vh",
     borderRadius: "25px",
+    cardBorderRadius: "12px",
     buttonBorder: "5px",
     defaultSpacing: "2vh",
     iconBorder: "10px"
