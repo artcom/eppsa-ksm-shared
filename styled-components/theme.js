@@ -18,6 +18,7 @@ export default {
     buttonBorder: "5px",
     smallSpacing: "1vh",
     mediumSpacing: "2vh",
+    largeSpacing: "4vh",
     iconBorder: "10px"
   },
   font: {
