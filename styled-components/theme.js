@@ -16,7 +16,8 @@ export default {
     borderRadius: "25px",
     cardBorderRadius: "12px",
     buttonBorder: "5px",
-    defaultSpacing: "2vh",
+    smallSpacing: "1vh",
+    mediumSpacing: "2vh",
     iconBorder: "10px"
   },
   font: {

@@ -3,12 +3,11 @@ import clickEffect from "../animations/clickEffect"
 
 
 export default styled.div `
-  margin-top: 0.5em;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
-  max-height: 3.5em;
+  padding-left: 0.7em;
+  padding-right: 0.7em;
+  min-width: 50vw;
   overflow: hidden;
   box-sizing: border-box;
   border-radius: ${props => props.theme.layout.borderRadius};
