@@ -1,9 +1,8 @@
 import { injectGlobal } from "styled-components"
 
-
 const fontFamily = "Cabin"
 
-export function injectGlobalStyle(staticServerUrl) {
+export default function injectGlobalStyle(staticServerUrl) {
   injectGlobal`
     html, body {
       margin: 0;

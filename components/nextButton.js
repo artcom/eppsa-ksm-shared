@@ -1,9 +1,8 @@
-import styled, { css } from "styled-components"
 import React from "react"
+import styled, { css } from "styled-components"
 
-import Button from "../components/button"
-import ButtonIcon from "../../svg/EPPSA_Assets_Button_Icon.svg"
-
+import Button from "./button"
+import ButtonIcon from "../assets/EPPSA_Assets_Button_Icon.svg"
 
 const Container = styled.div`
   display: flex;

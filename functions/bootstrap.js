@@ -1,10 +1,9 @@
-import ContentServer from "../api/contentServer"
-import { transform } from "../api/helpers"
+import ContentServer from "../apis/contentServer"
+import { transform } from "../apis/helpers"
 
 const contentServerUri = process.env.CONTENT_SERVER_URI
 const assetServerUri = process.env.ASSET_SERVER_URI
 const staticServerUri = process.env.STATIC_SERVER_URI
-
 
 let gameClient
 let onReadyCallback
@@ -84,8 +83,6 @@ export default function bootstrap(onReady) {
 
     const challengeNumber = url.searchParams.get("challengeNumber")
     const challengeType = url.searchParams.get("challengeType")
-
-
 
     if (!challengeNumber || !challengeType) {
       console.error(`Missing query parameters:

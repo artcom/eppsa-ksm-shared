@@ -1,7 +1,6 @@
 import styled, { css } from "styled-components"
 import clickEffect from "../animations/clickEffect"
 
-
 export default styled.div `
   padding-top: 0.25em;
   padding-bottom: 0.25em;
