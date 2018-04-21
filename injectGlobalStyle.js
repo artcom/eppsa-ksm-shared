@@ -3,7 +3,7 @@ import { injectGlobal } from "styled-components"
 const fontFamily = "Cabin"
 
 export default function injectGlobalStyle(staticServerUrl) {
-  injectGlobal`
+  return injectGlobal`
     html, body {
       margin: 0;
       padding: 0;
