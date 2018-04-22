@@ -9,6 +9,7 @@ import Button from "./components/button"
 import FramedIcon from "./components/framedIcon"
 import NextButton from "./components/nextButton"
 import PageTitle from "./components/pageTitle"
+import StyledMarkdown from "./components/styledMarkdown"
 
 import injectGlobalStyle from "./injectGlobalStyle"
 import theme from "./theme"
@@ -25,6 +26,7 @@ export {
   FramedIcon,
   NextButton,
   PageTitle,
+  StyledMarkdown,
 
   injectGlobalStyle,
   theme
