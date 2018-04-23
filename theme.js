@@ -1,4 +1,4 @@
-const textSize = 2.5
+const textSize = 3
 
 export default {
   colors: {
@@ -12,19 +12,19 @@ export default {
   },
   layout: {
     offsetX: "10vw",
-    offsetY: "5vh",
+    offsetY: "5vw",
     borderRadius: "50px",
     cardBorderRadius: "12px",
     buttonBorder: "5px",
-    smallSpacing: "1vh",
-    mediumSpacing: "2vh",
-    largeSpacing: "4vh",
+    smallSpacing: "2vw",
+    mediumSpacing: "3vw",
+    largeSpacing: "6vw",
     iconBorder: "10px"
   },
   font: {
     fontFamily: "Cabin",
-    headline: { size: `${textSize * 1.5}vh`, weight: "bold", color: "#000000" },
-    button: { size: `${textSize * 1.25}vh`, weight: "normal", color: "#000000" },
-    text: { size: `${textSize}vh`, weight: "normal", color: "#777777" }
+    headline: { size: `${textSize * 1.5}vw`, weight: "bold", color: "#000000" },
+    button: { size: `${textSize * 1.25}vw`, weight: "normal", color: "#000000" },
+    text: { size: `${textSize}vw`, weight: "normal", color: "#777777" }
   }
 }

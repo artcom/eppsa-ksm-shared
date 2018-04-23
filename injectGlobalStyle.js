@@ -5,6 +5,7 @@ const fontFamily = "Cabin"
 export default function injectGlobalStyle(staticServerUrl) {
   return injectGlobal`
     html, body {
+      font-family: ${fontFamily};
       margin: 0;
       padding: 0;
       height: 100%;
