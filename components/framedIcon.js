@@ -8,5 +8,6 @@ export default styled.div`
   align-self: center;
   border: ${props => props.theme.layout.iconBorder} solid ${props => props.theme.colors.areaColor};
   background-image: url(${props => props.icon});
-  background-size: cover;
+  background-position-x: center;
+  background-size: auto 100%;
 `
