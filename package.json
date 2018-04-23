@@ -1,14 +1,21 @@
 {
   "name": "eppsa-ksm-shared",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
+    "eslint": "^4.19.1",
+    "eslint-plugin-import": "^2.11.0",
+    "eslint-plugin-react": "^7.7.0",
     "lodash.mapvalues": "^4.6.0",
     "lodash.omit": "^4.5.0",
     "lodash.sum": "^4.0.2",
+    "react": "^16.3.2",
     "react-autobind": "^1.0.6",
-    "styled-components": "^3.2.5"
+    "react-markdown": "^3.3.0"
+  },
+  "peerDependencies": {
+    "styled-components": "^3.2.6"
   },
   "devDependencies": {
     "eslint-config-artcom": "^0.7.0",

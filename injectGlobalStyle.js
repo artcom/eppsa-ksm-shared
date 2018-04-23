@@ -1,11 +1,11 @@
 import { injectGlobal } from "styled-components"
 
-
 const fontFamily = "Cabin"
 
-export function injectGlobalStyle(staticServerUrl) {
-  injectGlobal`
+export default function injectGlobalStyle(staticServerUrl) {
+  return injectGlobal`
     html, body {
+      font-family: ${fontFamily};
       margin: 0;
       padding: 0;
       height: 100%;

@@ -1,6 +1,5 @@
 import { css, keyframes } from "styled-components"
 
-
 export default function pulse(initialColor, blinkColor, blinking, colorType) {
   const { duration, repeats } = blinking
   const blink = keyframes`

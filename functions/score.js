@@ -1,7 +1,6 @@
 import sum from "lodash.sum"
 import autoBind from "react-autobind"
 
-
 export default class ScoreCalculation {
   constructor(timeToAnswer, scoreCalculation) {
     autoBind(this)
