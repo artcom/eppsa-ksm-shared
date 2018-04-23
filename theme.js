@@ -1,4 +1,4 @@
-const textSize = 3
+const textSize = 5
 
 export default {
   colors: {
