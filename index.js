@@ -6,6 +6,7 @@ import delay from "./functions/delay"
 import score from "./functions/score"
 
 import Button from "./components/button"
+import Description from "./components/description"
 import FramedIcon from "./components/framedIcon"
 import NextButton from "./components/nextButton"
 import PageTitle from "./components/pageTitle"
@@ -24,6 +25,7 @@ export {
   score,
 
   Button,
+  Description,
   FramedIcon,
   NextButton,
   PageTitle,
