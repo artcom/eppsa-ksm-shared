@@ -3,7 +3,7 @@ import * as helpers from "./apis/helpers"
 
 import bootstrap from "./functions/bootstrap"
 import delay from "./functions/delay"
-import score from "./functions/score"
+import ScoreCalculation from "./functions/scoreCalculation"
 
 import Button from "./components/button"
 import Description from "./components/description"
@@ -22,7 +22,7 @@ export {
 
   bootstrap,
   delay,
-  score,
+  ScoreCalculation,
 
   Button,
   Description,
