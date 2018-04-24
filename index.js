@@ -1,3 +1,6 @@
+import clickEffect from "./animations/clickEffect"
+import pulse from "./animations/pulse"
+
 import contentServer from "./apis/contentServer"
 import * as helpers from "./apis/helpers"
 
@@ -17,6 +20,9 @@ import injectGlobalStyle from "./injectGlobalStyle"
 import theme from "./theme"
 
 export {
+  clickEffect,
+  pulse,
+  
   contentServer,
   helpers,
 
