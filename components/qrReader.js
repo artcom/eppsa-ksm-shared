@@ -9,8 +9,22 @@ const QrReaderContainer = styled.div`
   height: 40vw;
   padding: ${props => props.theme.layout.largeSpacing};
   align-self: center;
-  background-color: ${props => props.theme.colors.secondary};
+  background-color: ${props => props.background === "default"
+    ? props.theme.colors.secondary
+    : props.background};
   border-radius: ${props => props.theme.layout.cardBorderRadius};
+`
+
+const TransparencyOverlay = styled.div`
+  position: absolute;
+  transform: translate(
+    -${props => props.theme.layout.largeSpacing},
+    -${props => props.theme.layout.largeSpacing}
+  );
+  width: calc(40vw + ${props => props.theme.layout.largeSpacing} * 2);
+  height: calc(40vw + ${props => props.theme.layout.largeSpacing} * 2);
+  background-color: white;
+  opacity: ${props => props.transparency ? 0.5 : 0};
 `
 
 const StyledQrReaderSeeker = styled(QrReaderSeeker)`
@@ -18,7 +32,9 @@ const StyledQrReaderSeeker = styled(QrReaderSeeker)`
   z-index: 2;
   width: 40vw;
   height: 40vw;
-  fill: ${props => props.theme.colors.primary};
+  fill: ${props => props.seeker === "default"
+    ? props.theme.colors.primary
+    : props.seeker};
 `
 
 const StyledQrReader = styled(ReactQrReader)`
@@ -33,11 +49,23 @@ const StyledQrReader = styled(ReactQrReader)`
   overflow: hidden;
 `
 
-export default props =>
-  <QrReaderContainer>
-    <StyledQrReaderSeeker />
-    <StyledQrReader
-      onScan={ props.onScan }
-      onError={ props.onError }
-      showViewFinder={ false } />
-  </QrReaderContainer>
+export default function QrReader(props) {
+  const { background, transparency, seeker } = props
+
+  return (
+    <QrReaderContainer background={ background }>
+      <TransparencyOverlay transparency={ transparency } />
+      <StyledQrReaderSeeker seeker={ seeker } />
+      <StyledQrReader
+        onScan={ props.onScan }
+        onError={ props.onError }
+        showViewFinder={ false } />
+    </QrReaderContainer>
+  )
+}
+
+QrReader.defaultProps = {
+  transparency: false,
+  seeker: "default",
+  background: "default"
+}

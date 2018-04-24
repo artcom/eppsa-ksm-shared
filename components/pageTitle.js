@@ -1,12 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 
-const Container = styled.div`
-  align-self: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-`
 
 const Title = styled.div`
   font-size: ${props => props.theme.font.headline.size};
@@ -16,6 +10,4 @@ const Title = styled.div`
 `
 
 export default props =>
-  <Container>
-    <Title>{ props.text }</Title>
-  </Container>
+  <Title>{ props.text }</Title>
