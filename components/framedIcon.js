@@ -1,13 +1,23 @@
+import React from "react"
 import styled from "styled-components"
 
-export default styled.div`
+
+const Container = styled.div`
   margin-top: ${props => props.theme.layout.iconBorder};
-  width: 70%;
-  padding-bottom: 70%;
+  width: 50vw;
+  height: 50vw;
   border-radius: 50%;
   align-self: center;
   border: ${props => props.theme.layout.iconBorder} solid ${props => props.theme.colors.areaColor};
-  background-image: url(${props => props.icon});
-  background-position-x: center;
-  background-size: auto 100%;
 `
+
+const StyledImg = styled.img`
+  margin-left: auto;
+	margin-right: auto;
+	display: block;
+`
+
+export default props =>
+  <Container>
+    <StyledImg height="100%" src={ props.iconSrc } srcSet={ props.iconSrcSet } />
+  </Container>
