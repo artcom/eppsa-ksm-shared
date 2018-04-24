@@ -9,7 +9,9 @@ const QrReaderContainer = styled.div`
   height: 40vw;
   padding: ${props => props.theme.layout.largeSpacing};
   align-self: center;
-  background-color: ${props => props.background};
+  background-color: ${props => props.background === "default"
+    ? props.theme.colors.secondary
+    : props.background};
   border-radius: ${props => props.theme.layout.cardBorderRadius};
 `
 
@@ -22,7 +24,7 @@ const TransparencyOverlay = styled.div`
   width: calc(40vw + ${props => props.theme.layout.largeSpacing} * 2);
   height: calc(40vw + ${props => props.theme.layout.largeSpacing} * 2);
   background-color: white;
-  opacity: ${props => props.transparency ? 0.5 : 1};
+  opacity: ${props => props.transparency ? 0.5 : 0};
 `
 
 const StyledQrReaderSeeker = styled(QrReaderSeeker)`
@@ -64,5 +66,6 @@ export default function QrReader(props) {
 
 QrReader.defaultProps = {
   transparency: false,
-  seeker: "default"
+  seeker: "default",
+  background: "default"
 }
