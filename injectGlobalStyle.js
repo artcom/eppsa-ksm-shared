@@ -11,6 +11,7 @@ export default function injectGlobalStyle(staticServerUrl) {
       height: 100%;
       width: 100%;
       user-select: none;
+      overflow: hidden;
     }
 
     #app, #root {
