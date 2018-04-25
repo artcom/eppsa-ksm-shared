@@ -1,7 +1,6 @@
 import { css, keyframes } from "styled-components"
 
 export default function clickEffect(initialXScale = 1) {
-  console.log(initialXScale)
   const click = keyframes`
     0% {
       transform: scale(${initialXScale}, 1);
