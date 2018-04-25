@@ -6,6 +6,10 @@ export default styled(ReactMarkdown)`
     font-size: 1.1em;
   }
 
+  font-size: ${props => props.theme.font.text.size}vw;
+  font-weight: ${props => props.theme.font.text.weight};
+  color: ${props => props.theme.font.text.color};
+  
   overflow-y: auto;
   margin-top: 1em;
   margin-bottom: 1em;

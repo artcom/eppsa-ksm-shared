@@ -5,67 +5,44 @@ import ReactQrReader from "react-qr-reader"
 import QrReaderSeeker from "../assets/EPPSA_Assets_QR-Code_Scanner.svg"
 
 const QrReaderContainer = styled.div`
-  width: 40vw;
-  height: 40vw;
-  padding: ${props => props.theme.layout.largeSpacing};
+  box-sizing: border-box;
+  width: ${props => props.theme.layout.cardWidth * 0.7}vw;
+  height: ${props => props.theme.layout.cardWidth * 0.7}vw;
+  padding: ${props => props.theme.layout.mediumSpacing};
   align-self: center;
-  background-color: ${props => props.background === "default"
-    ? props.theme.colors.secondary
-    : props.background};
+  background-color: ${props => props.theme.colors.secondary};
   border-radius: ${props => props.theme.layout.cardBorderRadius};
-`
-
-const TransparencyOverlay = styled.div`
-  position: absolute;
-  transform: translate(
-    -${props => props.theme.layout.largeSpacing},
-    -${props => props.theme.layout.largeSpacing}
-  );
-  width: calc(40vw + ${props => props.theme.layout.largeSpacing} * 2);
-  height: calc(40vw + ${props => props.theme.layout.largeSpacing} * 2);
-  background-color: white;
-  opacity: ${props => props.transparency ? 0.5 : 0};
 `
 
 const StyledQrReaderSeeker = styled(QrReaderSeeker)`
   position: absolute;
   z-index: 2;
-  width: 40vw;
-  height: 40vw;
-  fill: ${props => props.seeker === "default"
-    ? props.theme.colors.primary
-    : props.seeker};
+  transform: translate(
+    ${props => props.theme.layout.cardWidth * 0.15 / 2 - 3}vw,
+    ${props => props.theme.layout.cardWidth * 0.15 / 2 - 3}vw
+  );
+  width: ${props => props.theme.layout.cardWidth * 0.55}vw;
+  height: ${props => props.theme.layout.cardWidth * 0.55}vw;
+  fill: ${props => props.color};
 `
 
 const StyledQrReader = styled(ReactQrReader)`
-  position: absolute;
-  transform: translate(
-    -${props => props.theme.layout.mediumSpacing},
-    -${props => props.theme.layout.mediumSpacing}
-  );
-  width: calc(40vw + ${props => props.theme.layout.mediumSpacing} * 2);
-  height: calc(40vw + ${props => props.theme.layout.mediumSpacing} * 2);
+  width: 100%;
+  height: 100%;
   border-radius: ${props => props.theme.layout.cardBorderRadius};
   overflow: hidden;
 `
 
 export default function QrReader(props) {
-  const { background, transparency, seeker } = props
+  const { background, seekerColor } = props
 
   return (
     <QrReaderContainer background={ background }>
-      <TransparencyOverlay transparency={ transparency } />
-      <StyledQrReaderSeeker seeker={ seeker } />
+      <StyledQrReaderSeeker color={ seekerColor } />
       <StyledQrReader
         onScan={ props.onScan }
         onError={ props.onError }
         showViewFinder={ false } />
     </QrReaderContainer>
   )
-}
-
-QrReader.defaultProps = {
-  transparency: false,
-  seeker: "default",
-  background: "default"
 }

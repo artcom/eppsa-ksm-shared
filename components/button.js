@@ -17,7 +17,7 @@ export default styled.div `
   display: flex;
   align-self: center;
   justify-content: center;
-  font-size: ${props => props.theme.font.button.size};
+  font-size: ${props => props.theme.font.button.size}vw;
   font-weight: ${props => props.theme.font.button.weight};
   color: ${props => props.theme.font.button.color};
   animation: ${props => props.clicked ? css`${clickEffect()};` : ";"}
