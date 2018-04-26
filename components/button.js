@@ -4,8 +4,8 @@ import clickEffect from "../animations/clickEffect"
 export default styled.div `
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  padding-left: 0.7em;
-  padding-right: 0.7em;
+  padding-left: 1.2em;
+  padding-right: 1.2em;
   min-width: 50%;
   overflow: hidden;
   box-sizing: border-box;
