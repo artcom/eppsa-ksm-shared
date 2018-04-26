@@ -12,14 +12,12 @@ export default {
     wrongAnswer: "#f3352f"
   },
   layout: {
-    offsetX: "10vw",
-    offsetY: "5vw",
     borderRadius: "50px",
     cardBorderRadius: "12px",
     buttonBorder: "5px",
-    smallSpacing: "2vw",
-    mediumSpacing: "3vw",
-    largeSpacing: "6vw",
+    smallSpacing: 2,
+    mediumSpacing: 3,
+    largeSpacing: 6,
     iconBorder: "10px"
   },
   font: {
