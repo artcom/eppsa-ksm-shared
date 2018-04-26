@@ -8,6 +8,7 @@ import bootstrap from "./functions/bootstrap"
 import delay from "./functions/delay"
 import ScoreCalculation from "./functions/scoreCalculation"
 
+import AnimNextButton from "./components/animNextButton"
 import Button from "./components/button"
 import Description from "./components/description"
 import ErrorMessage from "./components/errorMessage"
@@ -31,6 +32,7 @@ export {
   delay,
   ScoreCalculation,
 
+  AnimNextButton,
   Button,
   Description,
   ErrorMessage,
