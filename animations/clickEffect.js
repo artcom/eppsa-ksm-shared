@@ -1,17 +1,17 @@
 import { css, keyframes } from "styled-components"
 
-export default function clickEffect(initialXScale = 1) {
+export default function clickEffec() {
   const click = keyframes`
     0% {
-      transform: scale(${initialXScale}, 1);
+      transform: scale(1, 1);
       opacity: 1;
     }
     50%   {
-      transform: scale(${initialXScale * 0.9}, 0.9);
+      transform: scale(0.9, 0.9);
       opacity: 0.5;
     }
     100% {
-      transform: scale(${initialXScale}, 1);
+      transform: scale(1, 1);
       opacity: 1;
     }
   `
