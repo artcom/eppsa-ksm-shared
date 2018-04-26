@@ -10,6 +10,7 @@ import ScoreCalculation from "./functions/scoreCalculation"
 
 import Button from "./components/button"
 import Description from "./components/description"
+import ErrorMessage from "./components/errorMessage"
 import FramedIcon from "./components/framedIcon"
 import NextButton from "./components/nextButton"
 import PageTitle from "./components/pageTitle"
@@ -22,7 +23,7 @@ import theme from "./theme"
 export {
   clickEffect,
   pulse,
-  
+
   contentServer,
   helpers,
 
@@ -32,6 +33,7 @@ export {
 
   Button,
   Description,
+  ErrorMessage,
   FramedIcon,
   NextButton,
   PageTitle,
