@@ -4,11 +4,11 @@ import styled from "styled-components"
 
 const Container = styled.div`
   margin-top: ${props => props.theme.layout.iconBorder};
-  width: 50vw;
-  height: 50vw;
+  width: ${props => props.theme.layout.cardWidth * 0.65}vw;
+  height: ${props => props.theme.layout.cardWidth * 0.65}vw;
   border-radius: 50%;
   align-self: center;
-  border: ${props => props.theme.layout.iconBorder} solid ${props => props.theme.colors.areaColor};
+    border: ${props => props.theme.layout.iconBorder}vw solid ${props => props.color};
 `
 
 const StyledImg = styled.img`
@@ -18,6 +18,6 @@ const StyledImg = styled.img`
 `
 
 export default props =>
-  <Container>
+  <Container color={ props.color }>
     <StyledImg height="100%" src={ props.iconSrc } srcSet={ props.iconSrcSet } />
   </Container>

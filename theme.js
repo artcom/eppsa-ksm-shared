@@ -14,11 +14,11 @@ export default {
   layout: {
     borderRadius: "50px",
     cardBorderRadius: "12px",
-    buttonBorder: "5px",
+    buttonBorder: 1.5,
+    iconBorder: 3.5,
     smallSpacing: 2,
     mediumSpacing: 3,
-    largeSpacing: 6,
-    iconBorder: "10px"
+    largeSpacing: 6
   },
   font: {
     fontFamily: "Cabin",

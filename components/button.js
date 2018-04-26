@@ -6,13 +6,13 @@ export default styled.div `
   padding-bottom: 0.25em;
   padding-left: 0.7em;
   padding-right: 0.7em;
-  min-width: 50vw;
+  min-width: 50%;
   overflow: hidden;
   box-sizing: border-box;
   border-radius: ${props => props.theme.layout.borderRadius};
   border-style: solid;
-  border-width: ${props => props.theme.layout.buttonBorder};
-  border-color: ${props => props.theme.colors.areaColor};
+  border-width: ${props => props.theme.layout.buttonBorder}vw;
+  border-color: ${props => props.theme.colors.area};
   text-align: center;
   display: flex;
   align-self: center;
