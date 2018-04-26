@@ -14,6 +14,7 @@ import Description from "./components/description"
 import ErrorMessage from "./components/errorMessage"
 import FramedIcon from "./components/framedIcon"
 import NextButton from "./components/nextButton"
+import Page from "./components/page"
 import PageTitle from "./components/pageTitle"
 import QrReader from "./components/qrReader"
 import StyledMarkdown from "./components/styledMarkdown"
@@ -38,6 +39,7 @@ export {
   ErrorMessage,
   FramedIcon,
   NextButton,
+  Page,
   PageTitle,
   QrReader,
   StyledMarkdown,
