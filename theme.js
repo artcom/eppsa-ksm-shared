@@ -14,6 +14,7 @@ export default {
   layout: {
     borderRadius: "50px",
     cardBorderRadius: "12px",
+    cardPadding: 7,
     buttonBorder: 1.5,
     iconBorder: 3.5,
     smallSpacing: 2,
