@@ -12,6 +12,5 @@ export default styled(ReactMarkdown)`
   color: ${props => props.theme.font.text.color};
 
   overflow-y: auto;
-  margin-top: 1em;
   margin-bottom: 1em;
   `
