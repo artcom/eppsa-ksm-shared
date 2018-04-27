@@ -19,9 +19,9 @@ export default function calculateTheme(
     layout: {
       borderRadius: "50px",
       cardBorderRadius: "12px",
-      cardPadding: 9 * cardViewRatio,
+      cardPadding: 8 * cardViewRatio,
       buttonBorder: 1.5 * cardViewRatio,
-      iconBorder: 3.5 * cardViewRatio,
+      iconBorder: 3.2 * cardViewRatio,
       smallSpacing: 2 * cardViewRatio,
       mediumSpacing: 3 * cardViewRatio,
       largeSpacing: 6 * cardViewRatio,

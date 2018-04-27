@@ -3,9 +3,9 @@ import styled from "styled-components"
 
 
 const Container = styled.div`
-  margin-top: ${props => props.theme.layout.iconBorder};
-  width: ${props => props.theme.layout.cardViewWidth * 0.65}vw;
-  height: ${props => props.theme.layout.cardViewWidth * 0.65}vw;
+  margin-top: ${props => props.theme.layout.iconBorder}vw;
+  width: ${props => props.theme.layout.cardViewWidth * 0.6}vw;
+  height: ${props => props.theme.layout.cardViewWidth * 0.6}vw;
   border-radius: 50%;
   align-self: center;
     border: ${props => props.theme.layout.iconBorder}vw solid ${props => props.color};
