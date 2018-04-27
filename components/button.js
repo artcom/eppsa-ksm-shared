@@ -2,8 +2,8 @@ import styled, { css } from "styled-components"
 import clickEffect from "../animations/clickEffect"
 
 export default styled.div `
-  padding-top: 0.25em;
-  padding-bottom: 0.25em;
+  padding-top: 0.3em;
+  padding-bottom: 0.3em;
   padding-left: 1.2em;
   padding-right: 1.2em;
   min-width: 50%;
@@ -11,7 +11,7 @@ export default styled.div `
   box-sizing: border-box;
   border-radius: ${props => props.theme.layout.borderRadius};
   border-style: solid;
-  border-width: ${props => props.theme.layout.buttonBorder}vw;
+  border-width: ${props => props.theme.layout.buttonBorder};
   border-color: ${props => props.theme.colors.area};
   text-align: center;
   display: flex;

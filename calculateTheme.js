@@ -19,12 +19,12 @@ export default function calculateTheme(
     layout: {
       borderRadius: "50px",
       cardBorderRadius: "12px",
-      cardPadding: 8 * cardViewRatio,
-      buttonBorder: 1.5 * cardViewRatio,
-      iconBorder: 3.2 * cardViewRatio,
+      iconBorder: "5%",
+      buttonBorder: "1.2vw",
+      cardPadding: `${8 * cardViewRatio}vw ${9 * cardViewRatio}vw`,
       smallSpacing: 2 * cardViewRatio,
       mediumSpacing: 3 * cardViewRatio,
-      largeSpacing: 6 * cardViewRatio,
+      largeSpacing: 5 * cardViewRatio,
       cardViewWidth,
       cardViewHeight,
       cardViewRatio
@@ -32,7 +32,7 @@ export default function calculateTheme(
     font: {
       fontFamily: "Cabin",
       headline: { size: textSize * 1.4 * cardViewRatio, weight: "bold", color: "#000000" },
-      button: { size: textSize * 1.25 * cardViewRatio, weight: "normal", color: "#000000" },
+      button: { size: textSize * 1.1 * cardViewRatio, weight: "normal", color: "#000000" },
       text: { size: textSize * cardViewRatio, weight: "normal", color: "#777777" }
     }
   }
