@@ -11,11 +11,11 @@ const Text = styled.div`
 `
 
 const NextIcon = styled(ButtonIcon)`
-  margin-left: 1em;
-  margin-top: 0.2em;
+  margin-left: 0.6em;
   height: 0.9em;
   fill: black;
-`
+  transform: scale(0.8)
+  `
 
 export default function NextButton(props) {
   return <Button { ...props }><Text>{ props.text }</Text><NextIcon /></Button>
