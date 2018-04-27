@@ -6,8 +6,8 @@ import QrReaderSeeker from "../assets/EPPSA_Assets_QR-Code_Scanner.svg"
 
 const QrReaderContainer = styled.div`
   box-sizing: border-box;
-  width: ${props => props.theme.layout.cardWidth * props.size}vw;
-  height: ${props => props.theme.layout.cardWidth * props.size}vw;
+  width: ${props => props.theme.layout.cardViewWidth * props.size}vw;
+  height: ${props => props.theme.layout.cardViewWidth * props.size}vw;
   padding: ${props => props.theme.layout.mediumSpacing}vw;
   align-self: center;
   background-color: ${props => props.theme.colors.secondary};
@@ -19,12 +19,12 @@ const StyledQrReaderSeeker = styled(QrReaderSeeker)`
   z-index: 2;
   transform: translate(
     ${props =>
-    props.theme.layout.cardWidth * (props.size * 0.2) / 2 - props.theme.layout.mediumSpacing}vw,
+    props.theme.layout.cardViewWidth * (props.size * 0.2) / 2 - props.theme.layout.mediumSpacing}vw,
     ${props =>
-    props.theme.layout.cardWidth * (props.size * 0.2) / 2 - props.theme.layout.mediumSpacing}vw
+    props.theme.layout.cardViewWidth * (props.size * 0.2) / 2 - props.theme.layout.mediumSpacing}vw
   );
-  width: ${props => props.theme.layout.cardWidth * props.size * 0.8}vw;
-  height: ${props => props.theme.layout.cardWidth * props.size * 0.8}vw;
+  width: ${props => props.theme.layout.cardViewWidth * props.size * 0.8}vw;
+  height: ${props => props.theme.layout.cardViewWidth * props.size * 0.8}vw;
   fill: ${props => props.color};
 `
 

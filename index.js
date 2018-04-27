@@ -20,7 +20,7 @@ import QrReader from "./components/qrReader"
 import StyledMarkdown from "./components/styledMarkdown"
 
 import injectGlobalStyle from "./injectGlobalStyle"
-import theme from "./theme"
+import calculateTheme from "./calculateTheme"
 
 export {
   clickEffect,
@@ -45,5 +45,5 @@ export {
   StyledMarkdown,
 
   injectGlobalStyle,
-  theme
+  calculateTheme
 }
