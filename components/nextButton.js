@@ -11,7 +11,7 @@ const Text = styled.div`
 `
 
 const NextIcon = styled(ButtonIcon)`
-  margin-left: 0.6em;
+  margin-left: 0.3em;
   height: 0.9em;
   fill: black;
   transform: scale(0.8)
