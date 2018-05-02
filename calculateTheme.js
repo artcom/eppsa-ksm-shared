@@ -1,10 +1,12 @@
 const textSize = 5
 
 export default function calculateTheme(
-  cardViewWidth = 100,
-  cardViewHeight = 100,
-  cardViewRatio = 1
+  largeCardViewWidth = 100,
+  smallCardViewWidth = 100,
+  cardRatio
   ) {
+  const largeCardViewRatio = largeCardViewWidth / 100
+  
   return {
     colors: {
       primary: "#f5a159",
@@ -20,20 +22,20 @@ export default function calculateTheme(
       borderRadius: "50px",
       cardBorderRadius: "12px",
       iconBorder: "5%",
-      buttonBorder: "1.2vw",
-      cardPadding: `${8 * cardViewRatio}vw ${9 * cardViewRatio}vw`,
-      smallSpacing: 2 * cardViewRatio,
-      mediumSpacing: 3 * cardViewRatio,
-      largeSpacing: 5 * cardViewRatio,
-      cardViewWidth,
-      cardViewHeight,
-      cardViewRatio
+      buttonBorder: "0.2em",
+      cardPadding: `${8 * largeCardViewRatio}vw ${9 * largeCardViewRatio}vw`,
+      smallSpacing: 2 * largeCardViewRatio,
+      mediumSpacing: 3 * largeCardViewRatio,
+      largeSpacing: 5 * largeCardViewRatio,
+      largeCardViewWidth,
+      smallCardViewWidth,
+      cardRatio
     },
     font: {
       fontFamily: "Cabin",
-      headline: { size: textSize * 1.4 * cardViewRatio, weight: "bold", color: "#000000" },
-      button: { size: textSize * 1.1 * cardViewRatio, weight: "normal", color: "#000000" },
-      text: { size: textSize * cardViewRatio, weight: "normal", color: "#777777" }
+      headline: { size: textSize * 1.4 * largeCardViewRatio, weight: "bold", color: "#000000" },
+      button: { size: textSize * 1.1 * largeCardViewRatio, weight: "normal", color: "#000000" },
+      text: { size: textSize * largeCardViewRatio, weight: "normal", color: "#777777" }
     }
   }
 }
