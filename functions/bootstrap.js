@@ -17,6 +17,15 @@ const finishChallenge = (score) => {
     }, gameClient.origin)
 }
 
+const addScore = score => {
+  gameClient.source.postMessage(
+    {
+      source: "challenge",
+      score,
+      id: "addScore"
+    }, gameClient.origin)
+}
+
 const showTimeline = (startTime) => {
   gameClient.source.postMessage(
     {
@@ -64,6 +73,7 @@ function receiveMessage(event) {
 
   onReadyCallback(data.data, { callbacks: {
     finishChallenge,
+    addScore,
     showTimeline,
     startTimelineClock,
     stopTimelineClock,
