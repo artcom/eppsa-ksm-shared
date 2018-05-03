@@ -11,6 +11,7 @@ const Text = styled.div`
 `
 
 const NextIcon = styled(ButtonIcon)`
+  margin-top: 0.2em;
   margin-left: 0.3em;
   height: 0.9em;
   fill: black;
