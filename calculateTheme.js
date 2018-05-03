@@ -7,6 +7,9 @@ export default function calculateTheme(
   ) {
   const largeCardViewRatio = largeCardViewWidth / 100
 
+  const cardPaddingVertical = 8 * largeCardViewRatio
+  const cardPaddingHorizontal = 9 * largeCardViewRatio
+
   return {
     colors: {
       primary: "#f5a159",
@@ -23,7 +26,9 @@ export default function calculateTheme(
       cardBorderRadius: "12px",
       iconBorder: "5%",
       buttonBorder: "0.2em",
-      cardPadding: `${8 * largeCardViewRatio}vw ${9 * largeCardViewRatio}vw`,
+      cardPaddingVertical: `${cardPaddingVertical}vw`,
+      cardPaddingHorizontal: `${cardPaddingHorizontal}vw`,
+      cardPadding: `${cardPaddingVertical}vw ${cardPaddingHorizontal}vw`,
       smallSpacing: 2 * largeCardViewRatio,
       mediumSpacing: 3 * largeCardViewRatio,
       largeSpacing: 5 * largeCardViewRatio,
