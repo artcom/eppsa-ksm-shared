@@ -3,10 +3,10 @@ const textSize = 5
 export default function calculateTheme(
   largeCardViewWidth = 100,
   smallCardViewWidth = 100,
-  cardRatio
+  cardRatio = 2 / 3
   ) {
   const largeCardViewRatio = largeCardViewWidth / 100
-  
+
   return {
     colors: {
       primary: "#f5a159",
