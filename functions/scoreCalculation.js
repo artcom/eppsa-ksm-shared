@@ -4,7 +4,7 @@ import autoBind from "react-autobind"
 export default class ScoreCalculation {
   constructor(timeToAnswer, scoreCalculation) {
     autoBind(this)
-    this.fibo = [3, 5, 8]
+    this.fibo = [5, 8, 13]
     this.bonus = 0
     this.timeToAnswer = timeToAnswer
     this.scoreCalculation = scoreCalculation
