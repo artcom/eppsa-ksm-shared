@@ -7,5 +7,5 @@ export default styled.div`
   font-weight: ${props => props.theme.font.headline.weight};
   color: ${props => props.theme.font.headline.color};
   text-align: center;
-  margin-bottom: ${props => props.theme.layout.largeSpacing}vw;
+  margin-bottom: ${props => props.theme.layout.mediumSpacing}vw;
 `
