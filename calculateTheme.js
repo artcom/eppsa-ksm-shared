@@ -4,7 +4,7 @@ export default function calculateTheme(
   largeCardViewWidth = 100,
   smallCardViewWidth = 100,
   cardRatio = 2 / 3
-  ) {
+) {
   const largeCardViewRatio = largeCardViewWidth / 100
 
   const cardPaddingVertical = 8 * largeCardViewRatio
@@ -12,12 +12,12 @@ export default function calculateTheme(
 
   return {
     colors: {
-      primary: "#f5a159",
+      primary: "#d4310f",
       secondary: "#e5e5e5",
       primaryFont: "#000000",
       secondaryFont: "#7b7b7b",
       background: "#ffffff",
-      area: "#f5a159",
+      area: "#d4310f",
       rightAnswer: "#00d700",
       wrongAnswer: "#f3352f"
     },
