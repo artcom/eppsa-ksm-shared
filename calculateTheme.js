@@ -41,11 +41,7 @@ export default function calculateTheme(
       headline: { size: textSize * 1.4 * largeCardViewRatio, weight: "bold", color: "#000000" },
       button: { size: textSize * 1.1 * largeCardViewRatio, weight: "normal", color: "#000000" },
       text: { size: textSize * largeCardViewRatio, weight: "normal", color: "#777777" },
-      dashboard: {
-        name: { size: 1.3, weight: "normal", color: "#000000" },
-        score: { size: 0.9, weight: "bold", color: "#FFFFFF" },
-        label: { size: 2, weight: "bold", color: "#000000" }
-      }
+      timeBall: { size: textSize * largeCardViewRatio, weight: "normal", color: "#ffffff" }
     }
   }
 }
