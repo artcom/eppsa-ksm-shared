@@ -8,6 +8,7 @@ const Container = styled.div`
   display: flex;
   margin-top: ${props => props.theme.layout.largeSpacing}vw;
   justify-content: center;
+  pointer-events: ${({ clicked }) => clicked ? "none" : "all"};
   ${props => props.slideIn
     ? css`flex: ${props => props.visible ? "0 1 4em" : "0 0 0em"};
       transition: flex 1000ms ease;`
