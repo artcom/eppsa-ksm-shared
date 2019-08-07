@@ -1,4 +1,4 @@
-import { css, keyframes } from "styled-components"
+import { keyframes } from "styled-components"
 
 export default function clickEffec() {
   const click = keyframes`
@@ -15,5 +15,5 @@ export default function clickEffec() {
       opacity: 1;
     }
   `
-  return css`${click} 100ms ease 0ms 1`
+  return `${click} 100ms ease 0ms 1`
 }

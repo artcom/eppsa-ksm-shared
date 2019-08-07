@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components"
+import styled from "styled-components"
 import clickEffect from "../animations/clickEffect"
 
 export default styled.div `
@@ -21,7 +21,7 @@ export default styled.div `
   font-size: ${props => props.theme.font.button.size}vw;
   font-weight: ${props => props.theme.font.button.weight};
   color: ${props => props.theme.font.button.color};
-  animation: ${props => props.clicked ? css`${clickEffect()}` : ""};
+  animation: ${props => props.clicked ? clickEffect() : ""};
   pointer-events: ${({ clicked }) => clicked ? "none" : "all"};
   flex-shrink: 0;
 `
