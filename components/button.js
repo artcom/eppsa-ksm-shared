@@ -1,7 +1,7 @@
+import React, { useState, useRef } from "react"
 import styled from "styled-components"
-import clickEffect from "../animations/clickEffect"
 
-export default styled.div `
+const Button = styled.div `
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   padding-left: 1.2em;
@@ -21,7 +21,35 @@ export default styled.div `
   font-size: ${props => props.theme.font.button.size}vw;
   font-weight: ${props => props.theme.font.button.weight};
   color: ${props => props.theme.font.button.color};
-  animation: ${props => props.clicked ? clickEffect() : ""};
-  pointer-events: ${({ clicked }) => clicked ? "none" : "all"};
+
+  ${({ clicked }) => clicked ?
+    `transform: scale(0.9, 0.9);
+    opacity: 0.5;` : ""}
+
   flex-shrink: 0;
 `
+
+export default (props) => {
+  const { onClick, children } = props
+
+  const [clicked, setClicked] = useState(false)
+  const buttonRef = useRef()
+
+  return (
+    <Button
+      { ...props }
+      ref={ buttonRef }
+      clicked={ clicked }
+      onTouchStart={ () => {
+        setClicked(true)
+      } }
+      onTouchEnd={ event => {
+        setClicked(false)
+        if (event.target === buttonRef.current) {
+          onClick()
+        }
+      } }>
+      { children }
+    </Button>
+  )
+}
