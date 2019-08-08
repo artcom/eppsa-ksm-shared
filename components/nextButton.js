@@ -8,6 +8,7 @@ const Text = styled.div`
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+  text-transform: capitalize;
 `
 
 const NextIcon = styled(ButtonIcon)`
@@ -15,7 +16,7 @@ const NextIcon = styled(ButtonIcon)`
   margin-left: 0.3em;
   height: 0.9em;
   fill: black;
-  transform: scale(0.8)
+  transform: scale(0.8);
   `
 
 export default function NextButton(props) {
