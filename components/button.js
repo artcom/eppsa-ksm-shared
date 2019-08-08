@@ -29,25 +29,22 @@ const Button = styled.div `
   flex-shrink: 0;
 `
 
-export default (props) => {
-  const { onClick, children } = props
-
+export default ({ children, theme, onClick, className }) => {
   const [clicked, setClicked] = useState(false)
   const buttonRef = useRef()
 
   return (
     <Button
-      { ...props }
-      ref={ buttonRef }
+      className={ className }
+      theme={ theme }
+      innerRef={ buttonRef }
       clicked={ clicked }
       onTouchStart={ () => {
         setClicked(true)
       } }
-      onTouchEnd={ event => {
+      onTouchEnd={ () => {
         setClicked(false)
-        if (event.target === buttonRef.current) {
-          onClick()
-        }
+        onClick()
       } }>
       { children }
     </Button>
