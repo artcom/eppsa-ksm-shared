@@ -19,7 +19,7 @@ const Circle = styled.div`
 const StyledImg = styled.img`
   background-color: white;
   border-radius: 50%;
-  object-fit: contain;
+  object-fit: cover;
   width: 100%;
   height: 100%;
 `
