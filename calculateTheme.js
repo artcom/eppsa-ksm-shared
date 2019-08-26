@@ -11,16 +11,6 @@ export default function calculateTheme(
   const cardPaddingHorizontal = 9 * largeCardViewRatio
 
   return {
-    colors: {
-      primary: "#d4310f",
-      secondary: "#e5e5e5",
-      primaryFont: "#000000",
-      secondaryFont: "#7b7b7b",
-      background: "#ffffff",
-      area: "#d4310f",
-      rightAnswer: "#00d700",
-      wrongAnswer: "#f3352f"
-    },
     layout: {
       borderRadius: "50px",
       cardBorderRadius: "12px",
